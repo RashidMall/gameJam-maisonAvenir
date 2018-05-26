@@ -68,20 +68,24 @@ function searchWord(word, arr){
     return searchResult;
 }
 
+let users = [];
+localStorage.setItem("savedData", JSON.stringify(users));
+users = JSON.parse(localStorage.getItem("savedData"));
+
+
 $('#searchButton').click(function(){
     let searchQuery = $('#mysearch').val();
-
-
-    if(btnID == 'start'){
-        myChrono.start();
-        $(this).prop('disabled', true);
-    }else if(btnID == 'pause'){
-        myChrono.pause();
-        $(this).siblings('#start').prop('disabled', false);
-    }else if(btnID == 'stop'){
-        myChrono.stop();
-        $(this).siblings('#start').prop('disabled', false);
-    } 
 })
+
+$('#submitButton').click(function(){
+    let pseudo = $('#userName').val();
+    let userPass = $('#userPass').val();
+    let mail = $('#userMail').val();
+    let phone = $('#userPhone').val();
+
+    let newUser = new User(pseudo, mail, phone, userPass);
+    users.push(newUser);
+    localStorage.setItem("savedData", JSON.stringify(users));
+});
 
 });
