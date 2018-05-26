@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 class User{
     constructor(u_pseudo, u_mail, u_phone, u_pass){
         this.u_pseudo = u_pseudo;
@@ -44,7 +46,49 @@ class User{
 }
 
 class Workshop {
-    constructor(activityName){
-        this.activityName = activityName;
+    constructor(w_name, w_address){
+        this.w_name = w_name;
+        this.w_address = w_address;
     }
 }
+<<<<<<< HEAD
+=======
+
+// returns users
+function searchWord(word, arr){
+    let searchResult = [];
+    for(let i = 0; i < arr.length; i++){
+        if(word === arr[i].u_name){
+            searchResult.push(arr[i]);
+        }
+        for(let j = 0; j < arr.length; j++){
+            if(word === arr[i].skills[j]){
+                searchResult.push(arr[i]);
+            }
+        }
+    }
+    return searchResult;
+}
+
+let users = [];
+localStorage.setItem("savedData", JSON.stringify(users));
+users = JSON.parse(localStorage.getItem("savedData"));
+
+
+$('#searchButton').click(function(){
+    let searchQuery = $('#mysearch').val();
+})
+
+$('#submitButton').click(function(){
+    let pseudo = $('#userName').val();
+    let userPass = $('#userPass').val();
+    let mail = $('#userMail').val();
+    let phone = $('#userPhone').val();
+
+    let newUser = new User(pseudo, mail, phone, userPass);
+    users.push(newUser);
+    localStorage.setItem("savedData", JSON.stringify(users));
+});
+
+});
+>>>>>>> 6bb66845175fc9567dab5de263c7a4c4111d89e8
