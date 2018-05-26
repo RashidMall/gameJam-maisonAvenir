@@ -51,8 +51,7 @@ class Workshop {
         this.w_address = w_address;
     }
 }
-<<<<<<< HEAD
-=======
+
 
 // returns users
 function searchWord(word, arr){
@@ -91,4 +90,4 @@ $('#submitButton').click(function(){
 });
 
 });
->>>>>>> 6bb66845175fc9567dab5de263c7a4c4111d89e8
+

@@ -5,9 +5,26 @@
 .i-big {
     font-size: 1.6em;
     color: aliceblue;
-    
+
 }
 
-.navbar-toggler {
-    
+.i-big-green {
+    font-size: 1.6em;
+    color: #84C4A4;
+
+}
+
+.navbar-toggler {}
+
+#loading:hover {
+    -webkit-animation: rotation 0.8s linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
