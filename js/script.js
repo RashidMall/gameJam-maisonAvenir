@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 class User{
     constructor(u_pseudo, u_mail, u_phone, u_pass){
         this.u_pseudo = u_pseudo;
@@ -44,7 +46,42 @@ class User{
 }
 
 class Workshop {
-    constructor(activityName){
-        this.activityName = activityName;
+    constructor(w_name, w_address){
+        this.w_name = w_name;
+        this.w_address = w_address;
     }
 }
+
+// returns users
+function searchWord(word, arr){
+    let searchResult = [];
+    for(let i = 0; i < arr.length; i++){
+        if(word === arr[i].u_name){
+            searchResult.push(arr[i]);
+        }
+        for(let j = 0; j < arr.length; j++){
+            if(word === arr[i].skills[j]){
+                searchResult.push(arr[i]);
+            }
+        }
+    }
+    return searchResult;
+}
+
+$('#searchButton').click(function(){
+    let searchQuery = $('#mysearch').val();
+
+
+    if(btnID == 'start'){
+        myChrono.start();
+        $(this).prop('disabled', true);
+    }else if(btnID == 'pause'){
+        myChrono.pause();
+        $(this).siblings('#start').prop('disabled', false);
+    }else if(btnID == 'stop'){
+        myChrono.stop();
+        $(this).siblings('#start').prop('disabled', false);
+    } 
+})
+
+});
