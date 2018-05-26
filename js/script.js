@@ -5,7 +5,7 @@ class User{
         this.u_pseudo = u_pseudo;
         this.u_mail = u_mail;
         this.u_pass = u_pass;
-        this.u_avatar = 0;
+        this.u_avatar = [];
         this.u_points = 0;
         this.u_grade = 0;
         this.u_phone = u_phone;
@@ -51,10 +51,8 @@ class Workshop {
         this.w_address = w_address;
     }
 }
-<<<<<<< HEAD
-=======
 
-// returns users
+// returns users with searched skill or name
 function searchWord(word, arr){
     let searchResult = [];
     for(let i = 0; i < arr.length; i++){
@@ -70,8 +68,16 @@ function searchWord(word, arr){
     return searchResult;
 }
 
+function uploadProfile(user){
+    $('#profile-userName').text(user.u_pseudo);
+    $('#profile-userMail').text(user.u_mail);
+    $('#profile-userPhone').text(user.u_phone);
+
+    $('.authentification').addClass('collapse');
+    $('#userProfile').addClass('show');
+}
+
 let users = [];
-localStorage.setItem("savedData", JSON.stringify(users));
 users = JSON.parse(localStorage.getItem("savedData"));
 
 
@@ -88,7 +94,8 @@ $('#submitButton').click(function(){
     let newUser = new User(pseudo, mail, phone, userPass);
     users.push(newUser);
     localStorage.setItem("savedData", JSON.stringify(users));
+
+    uploadProfile(users[users.length - 1]);
 });
 
 });
->>>>>>> 6bb66845175fc9567dab5de263c7a4c4111d89e8
