@@ -19,8 +19,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-green shadow sticky-top">
         <div>
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="login.html"><button type="button" class="btn btn-link btn-lg"><i class="fas fa-user i-big"></i></button></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><button type="button" class="btn btn-link btn-lg"><i class="fas fa-user i-big"></i></button></a>
                     <!--<a class="nav-link" href="#"><i class="fas fa-user"></i></a>-->
                 </li>
             </ul>
@@ -61,8 +61,43 @@
             </form>
         </div>
     </nav>
-    <div class="container">
-        <div class="border">test
+    <div class="container mt-5 ">
+        <!--<div class="border">
+            <span>Jeudi 31 Mai: 9H00/11H00 - PRESENTATION COOPERATIVE ACTIVITE & EMPLOIS</span>
+        </div>
+        <div class="border mt-5">
+            <span>Jeudi 31 Mai: 17H00/19H30 - BRICO ORDI</span>
+        </div>
+        <div class="border mt-5">
+            <span>Lundi 4 Juin: 14H30/16H30 - J'ANIME MON ATELIER</span>
+        </div>
+        <div class="border mt-5">
+            <span>Lundi 4 Juin: 14H30/16H30 - COCAGNE ALIMEN'TERRE</span>
+        </div>-->
+        <div class="accordion" id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">Lundi 4 Juin: 14H30/16H30 - COCAGNE ALIMEN'TERRE
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="fas fa-angle-down i-big-green"></i>
+        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Laisser un avis</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </form>
+                        <input class="btn btn-primary bg-green float-right mr-2" type="submit" value="Submit"><button class="btn btn-primary bg-green" type="submit">Like</button>
+                        
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <script type="text/javascript" src="./js/jquery.min.js"></script>
