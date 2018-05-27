@@ -85,15 +85,14 @@ if(JSON.parse(localStorage.getItem("savedData")) != null){
 }
 
 let userLogin = false;
+if(JSON.parse(localStorage.getItem("savedLogin")) != null
+    && JSON.parse(localStorage.getItem("savedLogin"))){
+    $('.authentification').addClass('collapse');
+    $('#userProfile').addClass('show');
+    uploadProfile(users[users.length - 1]);
+    /*test*/
+}
 
-
-    
-    
-    
-    
-    
-    
-    
 
 
 $('#searchButton').click(function(){
