@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"><i class="fas fa-home"></i> Accueil<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./actu.html"><i class="far fa-calendar-alt"></i> Actu</a>
@@ -52,10 +52,10 @@
                     <a class="nav-link" href="./map.html"><i class="far fa-map"></i> Map</a>
                 </li>
                 <li class="nav-item">
-                    <a id="userLogout" class="nav-link" href="./index.html"><i class="fas fa-sign-out-alt"></i> Se deconnecter</a>
+                    <a class="nav-link" href="./index.html"><i class="fas fa-sign-out-alt"></i> Se deconnecter</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" method="get" action="./profil.html">
+            <form class="form-inline my-2 my-lg-0">
                 <input id="mysearch" class="form-control mr-sm-2" type="search" placeholder="Chercher un usager" aria-label="Search">
                 <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
             </form>
@@ -69,69 +69,8 @@
             </ul>
         </div>-->
     </nav>
-
-    <div class="container mt-5 p-5 border authentification">
-        <h3>Authentification</h3>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-user"></i></span>
-            </div>
-            <input type="text" class="form-control" placeholder="entrer votre pseudo" aria-label="Usager" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-unlock"></i></span>
-            </div>
-            <input type="text" class="form-control" placeholder="entrer votre mot de passe" aria-label="Mot de passe" aria-describedby="basic-addon1">
-        </div>
-        <button class="btn btn-primary bg-green" type="submit">Se connecter</button>
-    </div>
-
-    <div class="container mt-5 p-5 border authentification">
-        <h3>Creer votre compte</h3>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-user"></i></span>
-            </div>
-            <input id="userName" type="text" class="form-control" placeholder="choisir votre pseudo" aria-label="Usager" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-unlock"></i></span>
-            </div>
-
-            <input id="userPass" type="password" class="form-control" placeholder="choisir votre mot de passe" aria-label="Mot de passe" aria-describedby="basic-addon1">
-
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text bg-green" id="basic-addon1"><i class="far fa-envelope"></i></span>
-            </div>
-
-            <input id="userMail" type="text" class="form-control" placeholder="entrer votre mail" aria-label="adresse email" aria-describedby="basic-addon1">
-
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-phone"></i></span>
-            </div>
-            <input id="userPhone" type="text" class="form-control" placeholder="numero de telephone" aria-label="numero de telephone" aria-describedby="basic-addon1">
-        </div>
-        <button id="submitButton" class="btn btn-primary bg-green" type="submit">Valider</button>
-
-    </div>
-    
-    <div id="userProfile" class="container border text-center mt-5 p-5 border collapse">
-        <img src="./img/avatar1.png">
-        <h3 id="profile-userName" >bob</h3>
-        <p id="profile-userMail">bob@gmail.com</p>
-        <p id="profile-userPhone">tel</p>
-        <div class="row">
-            <div class="col border"></div>
-            <div class="col border"></div>
-        </div>
-        <ul id="profile-skills">
-        </ul>
+    <div class="container">
+        <div>resultats de recherche</div>
     </div>
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>

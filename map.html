@@ -11,6 +11,10 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <!--<link href="/css/fontawesome-all.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+
+	
     <link href="./css/styles.css" rel="stylesheet">
 </head>
 
@@ -18,14 +22,14 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-green shadow sticky-top">
         <div>
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="login.html"><button type="button" class="btn btn-link btn-lg"><i class="fas fa-user i-big"></i></button></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><button type="button" class="btn btn-link btn-lg"><i class="fas fa-user i-big"></i></button></a>
                     <!--<a class="nav-link" href="#"><i class="fas fa-user"></i></a>-->
                 </li>
             </ul>
         </div>
         <a class="navbar-brand text-danger" href="#">Coop Café</a>
-        
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -33,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fas fa-home"></i> Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Accueil<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./actu.html"><i class="far fa-calendar-alt"></i> Actu</a>
@@ -52,10 +56,10 @@
                     <a class="nav-link" href="./map.html"><i class="far fa-map"></i> Map</a>
                 </li>
                 <li class="nav-item">
-                    <a id="userLogout" class="nav-link" href="./index.html"><i class="fas fa-sign-out-alt"></i> Se deconnecter</a>
+                    <a class="nav-link" href="./index.html"><i class="fas fa-sign-out-alt"></i> Se deconnecter</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" method="get" action="./profil.html">
+            <form class="form-inline my-2 my-lg-0">
                 <input id="mysearch" class="form-control mr-sm-2" type="search" placeholder="Chercher un usager" aria-label="Search">
                 <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
             </form>
@@ -70,10 +74,24 @@
         </div>-->
     </nav>
     <div class="container">
-        <img src="img/accueil.png" class="img-fluid">
+        <div id="mapid" style="width: 100%; height: 600px;" class="mt-5 border text-center"></div>
+        <script>
+            var mymap = L.map('mapid').setView([43.107863, 0.723799], 17);
+
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                maxZoom: 18,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                id: 'mapbox.streets'
+            }).addTo(mymap);
+            var marker = L.marker([43.107863, 0.723799]).addTo(mymap);
+            marker.bindPopup("<img src='./img/avatar6.png'><b>Jean-Louis</b><br>Brico Ordi").openPopup();
+        </script>
     </div>
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
     <script type="text/javascript" src="./js/script.js"></script>
 </body>
 
