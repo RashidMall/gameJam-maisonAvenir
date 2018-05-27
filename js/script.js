@@ -81,11 +81,11 @@ let users = [];
 users = JSON.parse(localStorage.getItem("savedData"));
 
 let userLogin = false;
-if(JSON.parse(localStorage.getItem("savedLogin"))){
+/*if(JSON.parse(localStorage.getItem("savedLogin"))){
     $('.authentification').addClass('collapse');
     $('#userProfile').addClass('show');
     uploadProfile(users[users.length - 1]);
-}
+}*/
 
 
 $('#searchButton').click(function(){
@@ -109,4 +109,19 @@ $('#submitButton').click(function(){
 
 
 
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+

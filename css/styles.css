@@ -14,7 +14,9 @@
 
 }
 
-.navbar-toggler {}
+#mapid { 
+    height: 180px; 
+}
 
 #loading:hover {
     -webkit-animation: rotation 0.8s linear;
