@@ -90,6 +90,7 @@ if(JSON.parse(localStorage.getItem("savedLogin")) != null
     $('.authentification').addClass('collapse');
     $('#userProfile').addClass('show');
     uploadProfile(users[users.length - 1]);
+    /*test*/
 }
 
 
