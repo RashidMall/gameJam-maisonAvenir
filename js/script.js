@@ -84,16 +84,21 @@ if(JSON.parse(localStorage.getItem("savedData")) != null){
 }
 
 let userLogin = false;
-/*if(JSON.parse(localStorage.getItem("savedLogin"))){
+
+if(JSON.parse(localStorage.getItem("savedLogin"))){
+
+if(JSON.parse(localStorage.getItem("savedLogin")) != null
+    && JSON.parse(localStorage.getItem("savedLogin"))){
+
     $('.authentification').addClass('collapse');
     $('#userProfile').addClass('show');
     uploadProfile(users[users.length - 1]);
-}*/
+}
 
 
 $('#searchButton').click(function(){
     let searchQuery = $('#mysearch').val();
-})
+});
 
 $('#submitButton').click(function(){
     let pseudo = $('#userName').val();
@@ -111,6 +116,7 @@ $('#submitButton').click(function(){
 });
 
 $('#userLogout').click(function(){
+    alert("hey");
     userLogin = false;
     localStorage.setItem("savedLogin", JSON.stringify(userLogin));
 
