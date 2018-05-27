@@ -78,7 +78,10 @@ function uploadProfile(user){
 }
 
 let users = [];
-users = JSON.parse(localStorage.getItem("savedData"));
+
+if(JSON.parse(localStorage.getItem("savedData")) != null){
+    users = JSON.parse(localStorage.getItem("savedData"));
+}
 
 let userLogin = false;
 /*if(JSON.parse(localStorage.getItem("savedLogin"))){
@@ -105,6 +108,12 @@ $('#submitButton').click(function(){
     localStorage.setItem("savedLogin", JSON.stringify(userLogin));
 
     uploadProfile(users[users.length - 1]);
+});
+
+$('#userLogout').click(function(){
+    userLogin = false;
+    localStorage.setItem("savedLogin", JSON.stringify(userLogin));
+
 });
 
 

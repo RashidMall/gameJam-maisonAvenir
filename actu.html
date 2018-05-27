@@ -10,7 +10,8 @@
     </title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <!--<link href="/css/fontawesome-all.min.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
     <link href="./css/styles.css" rel="stylesheet">
 
 </head>
@@ -20,23 +21,32 @@
         <div>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html"><button type="button" class="btn btn-link btn-lg"><i class="fas fa-user i-big"></i></button></a>
+                    <a class="nav-link" href="login.html">
+                        <button type="button" class="btn btn-link btn-lg">
+                            <i class="fas fa-user i-big"></i>
+                        </button>
+                    </a>
                     <!--<a class="nav-link" href="#"><i class="fas fa-user"></i></a>-->
                 </li>
             </ul>
         </div>
         <a class="navbar-brand text-danger" href="#">Coop Café</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./index.html">
+                        <i class="fas fa-home"></i> Accueil
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./actu.html"><i class="far fa-calendar-alt"></i> Actu</a>
+                <li id="#userLogout" class="nav-item">
+                    <a class="nav-link" href="./actu.html">
+                        <i class="far fa-calendar-alt"></i> Actu</a>
                 </li>
                 <!--<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wrench"></i>
@@ -49,15 +59,19 @@
         </div>
       </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="./map.html"><i class="far fa-map"></i> Map</a>
+                    <a class="nav-link" href="./map.html">
+                        <i class="far fa-map"></i> Map</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html"><i class="fas fa-sign-out-alt"></i> Se deconnecter</a>
+                    <a class="nav-link" href="./index.html">
+                        <i class="fas fa-sign-out-alt"></i> Se deconnecter</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Chercher un usager" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
             </form>
         </div>
     </nav>
@@ -79,8 +93,8 @@
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">Lundi 4 Juin: 14H30/16H30 - COCAGNE ALIMEN'TERRE
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <i class="fas fa-angle-down i-big-green"></i>
-        </button>
+                            <i class="fas fa-angle-down i-big-green"></i>
+                        </button>
                     </h5>
                 </div>
 
@@ -92,8 +106,10 @@
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                         </form>
-                        <input class="btn btn-primary bg-green float-right mr-2" type="submit" value="Submit"><button class="btn btn-primary bg-green" type="submit"><i class="fas fa-hands-helping"></i> Merci</button>
-                        
+                        <input class="btn btn-primary bg-green float-right mr-2" type="submit" value="Submit">
+                        <button class="btn btn-primary bg-green" type="submit">
+                            <i class="fas fa-hands-helping"></i> Merci</button>
+
                     </div>
                 </div>
             </div>
@@ -104,4 +120,5 @@
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>
 </body>
+
 </html>
