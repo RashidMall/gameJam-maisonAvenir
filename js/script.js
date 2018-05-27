@@ -80,6 +80,13 @@ function uploadProfile(user){
 let users = [];
 users = JSON.parse(localStorage.getItem("savedData"));
 
+let userLogin = false;
+if(JSON.parse(localStorage.getItem("savedLogin"))){
+    $('.authentification').addClass('collapse');
+    $('#userProfile').addClass('show');
+    uploadProfile(users[users.length - 1]);
+}
+
 
 $('#searchButton').click(function(){
     let searchQuery = $('#mysearch').val();
@@ -93,9 +100,13 @@ $('#submitButton').click(function(){
 
     let newUser = new User(pseudo, mail, phone, userPass);
     users.push(newUser);
+    userLogin = true;
     localStorage.setItem("savedData", JSON.stringify(users));
+    localStorage.setItem("savedLogin", JSON.stringify(userLogin));
 
     uploadProfile(users[users.length - 1]);
 });
+
+
 
 });
