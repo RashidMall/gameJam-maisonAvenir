@@ -96,6 +96,7 @@ if(JSON.parse(localStorage.getItem("savedLogin")) != null
 
 $('#searchButton').click(function(){
     let searchQuery = $('#mysearch').val();
+    let searchResult = searchWord(searchQuery, users);
 });
 
 $('#submitButton').click(function(){
