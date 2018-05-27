@@ -115,7 +115,6 @@ $('#submitButton').click(function(){
 });
 
 $('#userLogout').click(function(){
-    alert("hey");
     userLogin = false;
     localStorage.setItem("savedLogin", JSON.stringify(userLogin));
 
