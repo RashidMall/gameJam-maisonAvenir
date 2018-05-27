@@ -2,6 +2,18 @@
     background-color: #84C4A4;
 }
 
+.bg-orange {
+    background-color: #EC9F2B;
+}
+
+.c-green {
+    color: #84C4A4;
+}
+
+.c-orange {
+    color: #EC9F2B;
+}
+
 .i-big {
     font-size: 1.6em;
     color: aliceblue;
