@@ -1,10 +1,35 @@
+html {
+  background: url('../img/background.png') no-repeat center center fixed;
+  -webkit-background-size: 48% auto;
+  -moz-background-size: 48% auto;
+  -o-background-size: 48% auto;
+  background-size: 48% auto;
+  color: #000;
+}
+
+body {
+    background-color: transparent;
+}
+
 .bg-green {
     background-color: #84C4A4;
 }
 
+.bg-orange {
+    background-color: #EC9F2B;
+}
+
+.c-green {
+    color: #84C4A4;
+}
+
+.c-orange {
+    color: #EC9F2B;
+}
+
 .i-big {
     font-size: 1.6em;
-    color: aliceblue;
+    color: #EC9F2B;
 
 }
 
@@ -13,6 +38,22 @@
     color: #84C4A4;
 
 }
+
+.border {
+    border:solid 1px #EC9F2B !important;
+}
+
+.btn-green {
+    border: solid 1px #EC9F2B !important;
+    color: #000000;
+    
+}
+
+.btn-green:hover {
+    border: solid 1px #84C4A4 !important;
+    background-color: #EC9F2B;
+}
+
 
 #mapid { 
     
@@ -30,4 +71,21 @@
     to {
         -webkit-transform: rotate(360deg);
     }
+}
+
+.ical{
+         width:14px;
+    height:14px;
+     top:60px;
+     left:100px;
+     z-index:5;
+     background:url('cake1.png');
+    background-repeat: no-repeat;
+     animation: bounce 0.7s ease infinite;
+}
+
+@keyframes bounce{
+     from {top: 106px;}
+     50%  {top: 86px;}
+     to   {top: 106px;}
 }

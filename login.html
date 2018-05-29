@@ -11,6 +11,7 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <!--<link href="/css/fontawesome-all.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/font-awesome-animation.min.css">
     <link href="./css/styles.css" rel="stylesheet">
 </head>
 
@@ -19,7 +20,7 @@
         <div>
             <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="login.html"><button type="button" class="btn btn-link btn-lg"><i class="fas fa-user i-big"></i></button></a>
+                <a class="nav-link" href="login.html"><button type="button" class="btn btn-link btn-lg"><i class="fas fa-user i-big faa-tada animated-hover"></i></button></a>
                     <!--<a class="nav-link" href="#"><i class="fas fa-user"></i></a>-->
                 </li>
             </ul>
@@ -33,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./index.html"><i class="fas fa-home"></i> Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link faa-parent animated-hover" href="./index.html"><i class="fas fa-home faa-shake"></i> Accueil<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./actu.html"><i class="far fa-calendar-alt"></i> Actu</a>
@@ -72,29 +73,33 @@
 
     <div class="container mt-5 p-5 border authentification">
         <h3>Authentification</h3>
+        <h6 class="text-dark">Pseudo</h6>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-user"></i></span>
+                <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-user faa-shake"></i></span>
             </div>
             <input type="text" class="form-control" placeholder="entrer votre pseudo" aria-label="Usager" aria-describedby="basic-addon1">
         </div>
+        <h6 class="text-dark">Mot de passe</h6>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-unlock"></i></span>
             </div>
             <input type="text" class="form-control" placeholder="entrer votre mot de passe" aria-label="Mot de passe" aria-describedby="basic-addon1">
         </div>
-        <button class="btn btn-primary bg-green" type="submit">Se connecter</button>
+        <button class="btn btn-green bg-green" type="submit">Se connecter</button>
     </div>
 
     <div class="container mt-5 p-5 border authentification">
         <h3>Creer votre compte</h3>
+        <h6 class="text-dark">Pseudo</h6>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-user"></i></span>
             </div>
             <input id="userName" type="text" class="form-control" placeholder="choisir votre pseudo" aria-label="Usager" aria-describedby="basic-addon1">
         </div>
+        <h6 class="text-dark">Mot de passe</h6>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-unlock"></i></span>
@@ -103,6 +108,7 @@
             <input id="userPass" type="password" class="form-control" placeholder="choisir votre mot de passe" aria-label="Mot de passe" aria-describedby="basic-addon1">
 
         </div>
+        <h6 class="text-dark">Adresse mail<span class="font-weight-light"> (optionnel)</span></h6>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text bg-green" id="basic-addon1"><i class="far fa-envelope"></i></span>
@@ -111,13 +117,14 @@
             <input id="userMail" type="text" class="form-control" placeholder="entrer votre mail" aria-label="adresse email" aria-describedby="basic-addon1">
 
         </div>
+        <h6 class="text-dark">Téléphone<span class="font-weight-light"> (optionnel)</span></h6>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text bg-green" id="basic-addon1"><i class="fas fa-phone"></i></span>
             </div>
             <input id="userPhone" type="text" class="form-control" placeholder="numero de telephone" aria-label="numero de telephone" aria-describedby="basic-addon1">
         </div>
-        <button id="submitButton" class="btn btn-primary bg-green" type="submit">Valider</button>
+        <button id="submitButton" class="btn btn-green bg-green" type="submit">Valider</button>
 
     </div>
     

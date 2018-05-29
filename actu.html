@@ -10,8 +10,8 @@
     </title>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <!--<link href="/css/fontawesome-all.min.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/font-awesome-animation.min.css">
     <link href="./css/styles.css" rel="stylesheet">
 
 </head>
@@ -31,8 +31,7 @@
             </ul>
         </div>
         <a class="navbar-brand text-danger" href="#">Coop Café</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -75,7 +74,7 @@
             </form>
         </div>
     </nav>
-    <div class="container mt-5 ">
+    <div class="container mt-5 text-center bg-round">
         <!--<div class="border">
             <span>Jeudi 31 Mai: 9H00/11H00 - PRESENTATION COOPERATIVE ACTIVITE & EMPLOIS</span>
         </div>
@@ -88,11 +87,11 @@
         <div class="border mt-5">
             <span>Lundi 4 Juin: 14H30/16H30 - COCAGNE ALIMEN'TERRE</span>
         </div>-->
-        <div class="accordion" id="accordion">
+        <div class="accordion mb-2" id="accordion">
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">Lundi 4 Juin: 14H30/16H30 - COCAGNE ALIMEN'TERRE
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <i class="fas fa-angle-down i-big-green"></i>
                         </button>
                     </h5>
@@ -107,13 +106,45 @@
                             </div>
                         </form>
                         <input class="btn btn-primary bg-green float-right mr-2" type="submit" value="Submit">
-                        <button class="btn btn-primary bg-green" type="submit">
-                            <i class="fas fa-hands-helping"></i> Merci</button>
+                        <button class="btn btn-primary bg-orange" type="submit">
+                            <i class="fas fa-hands-helping faa-vertical animated"></i> Merci</button>
 
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="accordion mb-2" id="accordion2">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">Lundi 4 Juin: 14H30/16H30 - BRICO VELO
+                        <button class="btn btn-link float-right" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
+                            <i class="fas fa-angle-down i-big-green"></i>
+                        </button>
+                    </h5>
+                </div>
 
+                <div id="collapseOne2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion2">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Laisser un avis</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                            </div>
+                        </form>
+                        <input class="btn btn-primary bg-green float-right mr-2" type="submit" value="Submit">
+                        <button class="btn btn-primary bg-orange" type="submit">
+                            <i class="fas fa-hands-helping faa-vertical animated"></i> Merci</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="">
+           <!-- <img src="./img/background.png" class="bg-round img-fluid float-center">-->
         </div>
     </div>
     <script type="text/javascript" src="./js/jquery.min.js"></script>
