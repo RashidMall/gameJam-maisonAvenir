@@ -65,6 +65,7 @@ function searchWord(word, arr){
             }
         }
     }
+    console.log("test" + searchResult);
     return searchResult;
 }
 
@@ -94,10 +95,10 @@ if(JSON.parse(localStorage.getItem("savedLogin")) != null
 }
 
 
-
 $('#searchButton').click(function(){
     let searchQuery = $('#mysearch').val();
     let searchResult = searchWord(searchQuery, users);
+    localStorage.setItem("savedSearchResult", JSON.stringify(searchResult));
 });
 
 $('#submitButton').click(function(){
@@ -121,21 +122,12 @@ $('#userLogout').click(function(){
 
 });
 
+//upload search result
+/* let savSearchResult = JSON.parse(localStorage.getItem("savedSearchResult"));
+$('#profil-page-pseudo').text(savSearchResult[savSearchResult.length - 1].u_name);
+$('#profil-page-mail').text(savSearchResult[savSearchResult.length - 1].u_mail);
+$('#profil-page-phone').text(savSearchResult[savSearchResult.length - 1].u_phone);
 
-
+ */
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
